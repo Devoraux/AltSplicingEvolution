@@ -1,12 +1,15 @@
 # AltSplicingEvolution
+by Imon Islam under the mentorship of Dr.Rori Rohlfs
+
 Here lives the master script for processing orthogroups. 
 The script provided is given to you, the user, without any guarentee of user support. I am busy, but chances are if you need help just email me KADENISLAM@GMAIL.COM and I will probably be very flattered and help you.
 
-This guide will be in three parts. You can read more about the programs and approaches of these python scripts in my thesis work detailed here at this link:
+You can read more about the programs and approaches of these python scripts in my thesis work detailed here at this link:
 https://docs.google.com/document/d/1ukSkgzTakW6a2njR3FpanAXTtB2ENgC5mf9LB_Z66OQ/edit?usp=sharing
 
+This guide will be in four parts. 
 The parts detailed:
-1. Creating gene orthogroups across species with PairwiseOrthogrouper
+1. Creating gene orthogroups across species with PairwiseOrthogrouper() and Biomart Output
 2. Creating exon orthogroups using Exorthist Output
 3. Extracting PSI and Informative Reads from tissue samples using RMATS
 4. Creating informative read and 
