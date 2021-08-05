@@ -1,24 +1,19 @@
 # AltSplicingEvolution
 Here lives the master script for processing orthogroups. 
-The script provided is given to you, the user, without any guarentee of user support. I am busy, but chances are if you need help just email me KADENISLAM@GMAIL.COM and I will probably be very flattered and help you. You can modify this python script however you need, but chances are youll probably break it. 
+The script provided is given to you, the user, without any guarentee of user support. I am busy, but chances are if you need help just email me KADENISLAM@GMAIL.COM and I will probably be very flattered and help you.
 
-Its not exactly simple to use, you might need some python experience, just find the full path's to your files and place them into the appropriate places in the python script. Depending on which method youll use, you will need to call on it in the main function at the bottom of the script. Once youve done this, enter into your terminal:
+This guide will be in three parts. You can read more about the programs and approaches of these python scripts in my thesis work detailed here at this link:
+https://docs.google.com/document/d/1ukSkgzTakW6a2njR3FpanAXTtB2ENgC5mf9LB_Z66OQ/edit?usp=sharing
 
-If using AllPossibleOrthogrouper-
-python DataSorter.py < AllPossibleOrthogroups.txt > results.txt
-
-If using PairwiseOrthogrouper-
+The parts detailed:
+1. Creating gene orthogroups across species with PairwiseOrthogrouper
+2. Creating exon orthogroups using Exorthist Output
+3. Extracting PSI and Informative Reads from tissue samples using RMATS
+4. Creating informative read and 
+To use PairwiseOrthogrouper-
 python DataSorter.py > results.txt
 
 To extract pairwise species data, do this:
-
-
-
-
-
-
-
-
 
 
 
