@@ -15,6 +15,7 @@ The parts detailed:
 4. Creating informative read and 
 
 -Part 1-
+
 First, to create gene orthogroups across species you must download the data using wget. 
 The following guide was created to obtain the data:
 https://docs.google.com/document/d/12nzD852h4yZrDyAp7i9CY1Z_lW6P5exgP9wV08Yy-xg/edit?usp=sharing
@@ -28,6 +29,7 @@ python PairwiseOrthogrouper.py
 You should then have your orthogroups. Save them to a text file of some sort to be used later.
 
 -Part 2- 
+
 Not very straightforward, but the ultimate outcome will be a file called 'filtered_best_scored_EX_matches_by_targetgene.tab' which you will then use to create exon orthogroups. Details about our parameters and information about how to run the main module of ExOrthist is here: https://docs.google.com/document/d/1vBJEkIbb_eFh-QRguPwa__8DYfuvs8p5Jg7Rz0t6Bso/edit?usp=sharing
 
 -Part 3-
