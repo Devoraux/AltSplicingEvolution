@@ -16,8 +16,6 @@ The parts detailed:
 
 First, to create gene orthogroups across species you must download the data using wget. 
 
-
-
 In order to receive the data for AllPossibleOrthogrouper, enter this into your command prompt:
 
 wget -O AllPossibleOrthogroups.txt 'http://www.ensembl.org/biomart/martservice?query=
@@ -30,13 +28,18 @@ In order to receive the data for PairwiseOrthogrouper, repeat the above steps bu
 
 For Human-Mouse Pairwise Data-
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_mmusculus_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>
+
 For Human-Chicken Pairwise Data-
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_ggallus_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "ggallus_homolog_ensembl_gene" /><Attribute name = "ggallus_homolog_orthology_type" /></Dataset></Query>
+
 For Human-Rat Pairwise Data- 
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_rnorvegicus_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "rnorvegicus_homolog_ensembl_gene" /><Attribute name = "rnorvegicus_homolog_orthology_type" /></Dataset></Query>
+
 For Human-Rabbit Pairwise Data-
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_ocuniculus_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "ocuniculus_homolog_ensembl_gene" /><Attribute name = "ocuniculus_homolog_orthology_type" /></Dataset></Query>
+
 For Human-Opossum Pairwise Data-
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_mdomestica_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mdomestica_homolog_ensembl_gene" /><Attribute name = "mdomestica_homolog_orthology_type" /></Dataset></Query>
+
 For Human-Macaque Pairwise Data-
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_mmulatta_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmulatta_homolog_ensembl_gene" /><Attribute name = "mmulatta_homolog_orthology_type" /></Dataset></Query>
