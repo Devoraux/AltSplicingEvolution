@@ -13,11 +13,8 @@ The parts detailed:
 2. Creating exon orthogroups using Exorthist Output
 3. Extracting PSI and Informative Reads from tissue samples using RMATS
 4. Creating informative read and 
-To use PairwiseOrthogrouper-
-python DataSorter.py > results.txt
 
-To extract pairwise species data, do this:
-
+First, to create gene orthogroups across species you must download the data using wget. 
 
 
 
@@ -26,12 +23,7 @@ In order to receive the data for AllPossibleOrthogrouper, enter this into your c
 wget -O AllPossibleOrthogroups.txt 'http://www.ensembl.org/biomart/martservice?query=
 Then paste this and hit enter:
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "ggallus_homolog_ensembl_gene" /><Attribute name = "rnorvegicus_homolog_ensembl_gene" /><Attribute name = "ocuniculus_homolog_ensembl_gene" /><Attribute name = "mdomestica_homolog_ensembl_gene" /><Attribute name = "mmulatta_homolog_ensembl_gene" /></Dataset></Query>’
-In order to receive the data for AllPossibleOrthogrouper, enter this into your command prompt:
 
-wget -O AllPossibleOrthogroups.txt 'http://www.ensembl.org/biomart/martservice?query=
-Then paste this query:
-
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "ggallus_homolog_ensembl_gene" /><Attribute name = "rnorvegicus_homolog_ensembl_gene" /><Attribute name = "ocuniculus_homolog_ensembl_gene" /><Attribute name = "mdomestica_homolog_ensembl_gene" /><Attribute name = "mmulatta_homolog_ensembl_gene" /></Dataset></Query>
 Then add a closing apostrophe(‘) and hit enter.
 
 In order to receive the data for PairwiseOrthogrouper, repeat the above steps but instead of the one large query, you must now wget 6 separate queries into your command prompt. Don't forget the apostrophe after each query. 
