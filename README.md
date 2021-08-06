@@ -14,32 +14,21 @@ The parts detailed:
 3. Extracting PSI and Informative Reads from tissue samples using RMATS
 4. Creating informative read and 
 
+-Part 1-
 First, to create gene orthogroups across species you must download the data using wget. 
+The following guide was created to obtain the data:
+https://docs.google.com/document/d/12nzD852h4yZrDyAp7i9CY1Z_lW6P5exgP9wV08Yy-xg/edit?usp=sharing
 
-In order to receive the data for AllPossibleOrthogrouper, enter this into your command prompt:
+Once you have the data downloaded via wget, your next step is to enter the path for each file into the PairwiseOrthogrouper.py script. 
 
-wget -O AllPossibleOrthogroups.txt 'http://www.ensembl.org/biomart/martservice?query=
-Then paste this and hit enter:
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "ggallus_homolog_ensembl_gene" /><Attribute name = "rnorvegicus_homolog_ensembl_gene" /><Attribute name = "ocuniculus_homolog_ensembl_gene" /><Attribute name = "mdomestica_homolog_ensembl_gene" /><Attribute name = "mmulatta_homolog_ensembl_gene" /></Dataset></Query>’
+Download the script PairwiseOrthogrouper and put each path for your new biomart files into the respective spots (line 35 for Human-Mouse, line 48 for Human-Chicken, line 61 for Human-Rat, line 74 for Human-Rabbit, line 87 for Human-Opossum, line 100 for Human-Macaque)
 
-Then add a closing apostrophe(‘) and hit enter.
+Run the script by doing the following:
+python PairwiseOrthogrouper.py 
+You should then have your orthogroups. Save them to a text file of some sort to be used later.
 
-In order to receive the data for PairwiseOrthogrouper, repeat the above steps but instead of the one large query, you must now wget 6 separate queries into your command prompt. Don't forget the apostrophe after each query. 
+-Part 2- 
+Not very straightforward, but the ultimate outcome will be a file called 'filtered_best_scored_EX_matches_by_targetgene.tab' which you will then use to create exon orthogroups. Details about our parameters and information about how to run the main module of ExOrthist is here: https://docs.google.com/document/d/1vBJEkIbb_eFh-QRguPwa__8DYfuvs8p5Jg7Rz0t6Bso/edit?usp=sharing
 
-For Human-Mouse Pairwise Data-
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_mmusculus_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>
-
-For Human-Chicken Pairwise Data-
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_ggallus_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "ggallus_homolog_ensembl_gene" /><Attribute name = "ggallus_homolog_orthology_type" /></Dataset></Query>
-
-For Human-Rat Pairwise Data- 
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_rnorvegicus_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "rnorvegicus_homolog_ensembl_gene" /><Attribute name = "rnorvegicus_homolog_orthology_type" /></Dataset></Query>
-
-For Human-Rabbit Pairwise Data-
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_ocuniculus_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "ocuniculus_homolog_ensembl_gene" /><Attribute name = "ocuniculus_homolog_orthology_type" /></Dataset></Query>
-
-For Human-Opossum Pairwise Data-
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_mdomestica_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mdomestica_homolog_ensembl_gene" /><Attribute name = "mdomestica_homolog_orthology_type" /></Dataset></Query>
-
-For Human-Macaque Pairwise Data-
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "CSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" ><Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "with_mmulatta_homolog" excluded = "0"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmulatta_homolog_ensembl_gene" /><Attribute name = "mmulatta_homolog_orthology_type" /></Dataset></Query>
+-Part 3-
+To derive PSI and informative reads from developmentally equivalent samples of Cardosa Moriera data, you must first use a script to pull that information. 
