@@ -30,7 +30,13 @@ You should then have your orthogroups. Save them to a text file of some sort to 
 
 -Part 2- 
 
-Not very straightforward, but the ultimate outcome will be a file called 'filtered_best_scored_EX_matches_by_targetgene.tab' which you will then use to create exon orthogroups. Details about our parameters and information about how to run the main module of ExOrthist is here: https://docs.google.com/document/d/1vBJEkIbb_eFh-QRguPwa__8DYfuvs8p5Jg7Rz0t6Bso/edit?usp=sharing
+Now that you have gene orthogroups, you will use them on a program called ExoOrthist. ExOrthist takes gene orthogroups created in step 1, and a few other things, to create pairwise exon orthology observations. 
+You can read about how to use the main module of ExOrthist to obtain exon pairwise data here: 
+https://docs.google.com/document/d/1vBJEkIbb_eFh-QRguPwa__8DYfuvs8p5Jg7Rz0t6Bso/edit?usp=sharing
+
+Not very straightforward, but the ultimate outcome will be a file called 'filtered_best_scored_EX_matches_by_targetgene.tab' which you will then use to create exon orthogroups. 
+
+To take this file and create exon orthogroups, download the 
 
 -Part 3-
 To derive PSI and informative reads from developmentally equivalent samples of Cardosa Moriera data, you must first use a script to pull that information. 
