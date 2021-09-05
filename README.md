@@ -38,7 +38,7 @@ Not very straightforward, but the ultimate outcome will be a file called 'filter
 
 To take this file and create exon orthogroups, download the ExonOrthogroupMaker.py and put the path of your 'filtered_best_scored_EX_matches_by_targetgene.tab' into line 152. Run the program and you should have your exon orthogroups. If the script takes too long, then you can run it on subsets of the gene orthogroups. 
 
-Ideally you dont have to run the script because I have included the exon orthogroups in this github for your convienience. 
+Ideally you dont have to run the script because I have included the exon orthogroups in this github for your convienience. It is the file called "BensMethodSecondAttempt.txt"
 
 -Part 3-
 
