@@ -12,7 +12,6 @@ The parts detailed:
 1. Creating gene orthogroups across species with PairwiseOrthogrouper() and Biomart Output
 2. Creating exon orthogroups using Exorthist Output
 3. Extracting PSI and Informative Reads from tissue samples using RMATS
-4. Creating informative read and 
 
 -Part 1-
 
